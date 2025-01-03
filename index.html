@@ -15,73 +15,117 @@
         }
         .hero {
             height: 100vh;
-            background: linear-gradient(to right, black, #333), url('placeholder-image.jpg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-        }
-        .hero h1, .hero p {
+            background: linear-gradient(to right, #000, #333);
             color: #fff;
         }
+
+        /* Animation Keyframes */
+        @keyframes slideFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Styling for Animations */
+        .hello {
+            display: inline-block;
+            animation: slideFromLeft 2s ease forwards;
+        }
+
+        .name {
+            display: inline-block;
+            animation: slideFromRight 2s ease forwards;
+        }
+
         .hero a.btn-primary {
             background-color: #fff;
             color: #000;
             border: none;
         }
+
         .hero a.btn-primary:hover {
             background-color: #333;
             color: #fff;
         }
+
         .section {
             padding: 50px 0;
-            background-color: #000;
         }
+
         .bg-light {
             background-color: #333 !important;
         }
+
         h2 {
             color: #fff;
         }
+
         .skills .progress-bar {
             background-color: #fff;
         }
+
         a {
             color: #fff;
         }
+
         a:hover {
             color: #999;
         }
+
         .card {
             border: none;
             background-color: #333;
             color: #fff;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         }
+
         .contact form input, .contact form textarea {
             background-color: #222;
             border: 1px solid #444;
             color: #fff;
         }
+
         .contact form input::placeholder, .contact form textarea::placeholder {
             color: #888;
         }
+
         .contact form button {
             background-color: #fff;
             color: #000;
         }
+
         .contact form button:hover {
             background-color: #333;
             color: #fff;
         }
+
         .content {
-            margin-top: 20px;
             display: flex;
             border: 2px solid white;
             border-radius: 28px;
             overflow: hidden;
             box-shadow: 2px 2px 25px rgb(248, 247, 247);
         }
+
         .imgblock {
             display: flex;
             justify-content: center;
@@ -108,9 +152,29 @@
             transform: scale(1.1);
             text-shadow: 1px 1px 10px #ffcc00;
         }
-        .tb{
-          color: white;
-          text-decoration-color: white;
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 15px;
+        }
+
+        .table-dark {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .table-bordered {
+            border: 1px solid #ddd;
+        }
+
+        .table-white{
+            background-color: white;
+            color: #343a40;
         }
     </style>
 </head>
@@ -119,9 +183,10 @@
 <!-- Homepage Section -->
 <section class="hero">
     <div class="container text-center">
-      <h1 class="display-4">
-        Hello, I'm <span class="name">Divakar Kolli</span>
-    </h1>
+        <h1 class="display-4">
+            <span class="hello">Hello, I'm</span> 
+            <span class="name">Divakar Kolli</span>
+        </h1>
         <p class="lead">A Frontend Web Developer</p>
         <a href="#about" class="btn btn-primary">View More</a>
     </div>
@@ -129,49 +194,51 @@
 
 <!-- About Me Section -->
 <section id="about" class="section bg-light">
-  <div class="container content">
-    <div class="row">
-        <div class="col-md-6 imgblock">
-            <img src="images/profile image.png" alt="Profile Picture" class="im">
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-4">
-            <h2>About Me</h2>
-            <p>Hi, I'm Divakar, a passionate and driven developer with a knowladge in programming and a thirst for continuous learning. With expertise in HTML, CSS, JavaScript, and java, I enjoy turning ideas into visually appealing and functional digital solutions. I believe in the power of innovation and hard work to make an impact. Beyond coding, I love exploring new technologies and sharing knowledge to inspire others on their journey.</p>
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-6 imgblock">
+                <img src="images/profile image.png" alt="Profile Picture" class="im">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-4">
+                <h2>About Me</h2>
+                <p>Hi, I'm Divakar, a passionate and driven developer with knowledge in programming and a thirst for continuous learning. With expertise in HTML, CSS, JavaScript, and Java, I enjoy turning ideas into visually appealing and functional digital solutions. Beyond coding, I love exploring new technologies and sharing knowledge to inspire others on their journey.</p>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
-
-<!-- Education section -->
+<!-- Education Section -->
 <section id="education" class="section">
-  <h2 class="text-center">Education</h2>
-  <table class="table table-bordered table-striped tb">
-      <thead>
-          <tr>
-              <th>Degree</th>
-              <th>Institution</th>
-              <th>Duration</th>
-              <th>Achievements</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td class="tb">Diploma in Computer Science</td>
-              <td>GIET</td>
-              <td>2022 - 2025</td>
-              <td>Graduated with Distinction (GPA: 8.6/10)</td>
-          </tr>
-          <tr>
-              <td>High School</td>
-              <td>S.K.R.S.R.P High School</td>
-              <td>2017 - 2022</td>
-              <td>Scored 75% in Finals</td>
-          </tr>
-      </tbody>
-  </table>
+    <div class="container">
+        <h2 class="text-center mb-4">Education</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Duration</th>
+                        <th>Achievements</th>
+                    </tr>
+                </thead>
+                <tbody class="table-white">
+                    <tr>
+                        <td>Diploma in Computer Science</td>
+                        <td>GIET</td>
+                        <td>2022 - 2025</td>
+                        <td>Graduated with Distinction (GPA: 8.6/10)</td>
+                    </tr>
+                    <tr>
+                        <td>High School</td>
+                        <td>S.K.R.S.R.P High School</td>
+                        <td>2017 - 2022</td>
+                        <td>Scored 75% in Finals</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </section>
-
 
 <!-- Skills Section -->
 <section id="skills" class="section bg-light">
@@ -227,7 +294,9 @@
     <div class="container">
         <h2 class="text-center">Portfolio Links</h2>
         <p class="text-center">Connect with me on: 
-            <a href="www.linkedin.com/in/divakar-sai-krishna-kolli-902432344">LinkedIn</a> | <a href="https://github.com/Divakarflutter9/my_portfolio">GitHub</a> | <a href="https://www.instagram.com/_xx_divakar/profilecard/?igsh=MXJsZmZ5eHNrZnNmcQ==">instagram</a>
+            <a href="https://www.linkedin.com/in/divakar-sai-krishna-kolli-902432344" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/Divakarflutter9/my_portfolio" target="_blank">GitHub</a> | 
+            <a href="https://www.instagram.com/_xx_divakar/" target="_blank">Instagram</a>
         </p>
     </div>
 </section>
@@ -236,18 +305,34 @@
 <section id="contact" class="section">
     <div class="container">
         <h2 class="text-center">Contact Me</h2>
-        <form action="#">
-            <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Your Name">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Your Email">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h5>Email:</h5>
+                <p>     kondababu474@gmail.com</p>
+                <h5>Phone:</h5>
+                <p>     +91 93471 69367</p>
+                <h5>    LinkedIn:</h5>
+                <p><a href="https://www.linkedin.com/in/divakar-sai-krishna-kolli-902432344" target="_blank">linkedin.com/in/divakar-sai-krishna-kolli</a></p>
+                <h5>    GitHub:</h5>
+                <p><a href="https://github.com/Divakarflutter9" target="_blank">github.com/Divakarflutter9</a></p>
+                <h5>Instagram:</h5>
+                <p><a href="https://www.instagram.com/_xx_divakar/profilecard/?igsh=MXJsZmZ5eHNrZnNmcQ==" target="_blank">@_xx_divakar</a></p>
             </div>
-            <div class="mb-3">
-                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
+        </div>
     </div>
 </section>
 
