@@ -95,7 +95,7 @@
             border: none;
             background-color: #333;
             color: #fff;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.948);
         }
 
         .contact form input, .contact form textarea {
@@ -176,6 +176,31 @@
             background-color: white;
             color: #343a40;
         }
+        /* ezperience */
+        #experience .card {
+            border-radius: 15px;
+            background: linear-gradient(145deg, #333333, #000000);
+            box-shadow: 2px 2px 25px rgb(248, 247, 247);
+        }
+        #experience .card-title {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+        #experience .card-subtitle {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        #experience .card-text {
+            color: #495057;
+        }
+        #experience ul li {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        #experience h5 {
+            color: #0d6efd;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -254,6 +279,10 @@
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 85%;">85%</div>
                 </div>
+                <h5>AI Prompt Engineering</h5>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;">95%</div>
+                </div>
             </div>
             <div class="col-md-6">
                 <h5>JavaScript</h5>
@@ -275,9 +304,18 @@
 
 <!-- Projects Section -->
 <section id="projects" class="section">
-    <div class="container">
-        <h2 class="text-center">Projects</h2>
-        <p class="text-center">Every expert was once a beginner. Stay motivated and keep learning!</p>
+    <h2 class="text-center">Projects</h2>
+    <!-- 1. Project Card Design -->
+    <div class="container mt-5 d-flex justify-content-center align-items-center" style="height: auto;">
+    <div class="card" style="width: 18rem;">
+        <img src="images/project-1.png" class="card-img-top" alt="Project Image">
+        <div class="card-body align-center">
+            <h5 class="card-title">Friend's Portfolio</h5>
+            <p class="card-text">Crafted a profetional and responsive portfolio tailored to showcase skills and achievements effectively.</p>
+            <p class="card-text"><small class="text-light"><strong>Technologies:</strong> HTML, CSS, JavaScript</small></p>
+            <a href="https://divakarflutter9.github.io/lokesh_portfolio/" target="_blank" class="btn btn-warning btn-center"><strong>View Project</strong></a>
+        </div>
+    </div>
     </div>
 </section>
 
@@ -285,8 +323,45 @@
 <section id="experience" class="section bg-light">
     <div class="container">
         <h2 class="text-center">Experience</h2>
-        <p class="text-center">"Experience comes from doing, not from what you are taught." - Take action and explore new opportunities.</p>
-    </div>
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Industrial Training Experience</h2>
+    
+            <div class="card shadow-lg p-4">
+                <div class="card-body">
+                    <h4 class="card-title">Anurag IT Solutions</h4>
+                    <p class="card-subtitle">Rajahmundry, Andhra Pradesh, India</p>
+                    <p class="card-text mt-3"><strong>December 2024 – Present (Ongoing)</strong></p>
+    
+                    <h5>Role: Industrial Trainee</h5>
+                    <ul>
+                        <li>Gaining hands-on experience in real-world software development and IT solutions.</li>
+                        <li>Collaborating with a professional team to learn and implement industry best practices.</li>
+                        <li>Enhancing technical skills by working on live projects and understanding client requirements.</li>
+                        <li>Contributing to the development, testing, and deployment phases of software applications.</li>
+                    </ul>
+    
+                    <h5>Technologies and Skills Acquired (so far):</h5>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> [List languages like Java, Python, etc., if used].</li>
+                        <li><strong>Frameworks/Tools:</strong> [Mention tools, e.g., Git, Visual Studio Code, etc., if applicable].</li>
+                        <li><strong>Other Skills:</strong> Team collaboration, problem-solving, and exposure to project management methodologies like Agile or Waterfall.</li>
+                    </ul>
+    
+                    <h5>Achievements (if any):</h5>
+                    <ul>
+                        <li>Successfully completed [briefly describe any task/project/module].</li>
+                        <li>Improved proficiency in [mention specific technology/tool].</li>
+                    </ul>
+    
+                    <h5>Future Goals:</h5>
+                    <ul>
+                        <li>To gain expertise in [specific technology or domain relevant to your training].</li>
+                        <li>To complete the training with a strong understanding of [industry-specific skills or goals].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
 </section>
 
 <!-- Portfolio Links Section -->
@@ -317,7 +392,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-light">Send</button>
                 </form>
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
