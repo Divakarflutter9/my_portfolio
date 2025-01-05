@@ -108,14 +108,14 @@
             color: #888;
         }
 
-        .contact form button {
+        #butt{
             background-color: #65b404;
             color: #000;
         }
 
-        .contact form button:hover {
-            background-color: #333;
-            color: #000000;
+        #butt:hover {
+            background-color: #064201;
+            color: #ffffff;
         }
 
         .content {
@@ -384,7 +384,7 @@
             <div class="col-md-6">
                 <form action="https://formspree.io/f/mzzzkvjp" method="POST" onsubmit="return handleSubmit(event);">
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Nmae" required>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="mb-3">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -395,7 +395,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" name="message" id="message" rows="5" placeholder="Enter Your message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-light">Send</button>
+                    <button type="submit" class="btn" id="butt">Send</button>
                 </form>
                          
             </div>
